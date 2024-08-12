@@ -11,7 +11,7 @@ This project is a multi-module program designed to analyze football matches by t
 - **View and Perspective Transformation**: Adjusts the view to calculate speed and distance in the correct perspective.
 - **Interpolation**: Fills in missing bounding boxes to maintain continuous tracking.
 
-![Screenshot](output_videos/screenshot.png)
+![Screenshot](output_vids/screenshot.png)
 
 ## Technologies Used
 The following modules are used in this project:
