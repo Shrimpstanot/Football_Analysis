@@ -178,8 +178,9 @@ class Tracker:
         team_2 = team2_frames / (team1_frames + team2_frames)
 
         # draw team control
-        cv2.putText(frame, f"Team 1 Poseession: {team_1*100}%", (1400, 900), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 3)
-        cv2.putText(frame, f"Team 2 Poseession: {team_2*100}%", (1400, 950), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 3)
+        cv2.putText(frame, f"Team 1 Poseession: {team_1*100:.1f}%", (1400, 900), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 3)
+        cv2.putText(frame, f"Team 2 Poseession: {team_2*100:.1f}%", (1400, 950), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 3)
+
 
         return frame
 

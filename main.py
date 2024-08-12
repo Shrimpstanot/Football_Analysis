@@ -33,7 +33,7 @@ def main():
     view_transformer.add_transformed_position_to_tracks(tracks)
 
 
-    # inetpolate ball positions
+    # interpolate ball positions
     tracks["ball"] = tracker.interpolate_ball_positions(tracks["ball"])
 
     # add speed and distance to tracks
@@ -74,10 +74,10 @@ def main():
     output_video_frames = tracker.draw_annotations(video_frames, tracks, team_ball_control)
     
     ## draw camera movement
-    # output_video_frames = camera_movement_estimator.draw_camera_movement(output_video_frames, camera_movement_per_frame)
+    output_video_frames = camera_movement_estimator.draw_camera_movement(output_video_frames, camera_movement_per_frame)
     
     ## draw speed and distance
-    speed_distance_estimator.draw_speed_distance(output_video_frames, tracks)
+    speed_distance_estimator.draw_speed_and_distance(output_video_frames, tracks)
 
     #save video
     save_video(output_video_frames, 'output_vids/output_video.avi')
