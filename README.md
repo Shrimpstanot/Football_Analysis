@@ -11,13 +11,15 @@ This project is a multi-module program designed to analyze football matches by t
 - **View and Perspective Transformation**: Adjusts the view to calculate speed and distance in the correct perspective.
 - **Interpolation**: Fills in missing bounding boxes to maintain continuous tracking.
 
+![Screenshot](output_videos/screenshot.png)
+
 ## Technologies Used
-- **YOLO (You Only Look Once)**: For object detection, trained with custom data to detect players, referees, and the ball.
-- **Trackers**: Utilized to maintain consistent tracking of detected objects.
-- **Image Clustering**: Grouped images by color to differentiate teams and other objects.
-- **Ball Acquisition Logic**: Developed custom logic to accurately identify and track the ball.
-- **Perspective Transformation**: Applied transformations to adjust for camera angles and field perspective.
-- **Interpolation**: Used to predict and fill in missing data points for smoother tracking.
+The following modules are used in this project:
+- YOLO: AI object detection model
+- Kmeans: Pixel segmentation and clustering to detect t-shirt color
+- Optical Flow: Measure camera movement
+- Perspective Transformation: Represent scene depth and perspective
+- Speed and distance calculation per player
 
 ## How It Works
 1. **Object Detection**: The system uses a custom-trained YOLO model to detect all players, referees, and the ball on the field.
@@ -35,13 +37,20 @@ This project is a multi-module program designed to analyze football matches by t
 ## Usage
 Run the main script to start analyzing a football match. The output video with overlays will be saved in the `output/` directory.
 
+## Trained Models
+- [Trained Yolo v5](https://drive.google.com/file/d/1DC2kCygbBWUKheQ_9cFziCsYVSRw6axK/view?usp=sharing)
+
+## Sample video
+-  [Sample input video](https://drive.google.com/file/d/1t6agoqggZKx6thamUuPAIdN_1zR9v9S_/view?usp=sharing)
+  
 ## Future Improvements
 - **Enhanced Ball Tracking**: Further refine the logic for more accurate ball tracking.
 - **Real-time Analysis**: Develop capabilities for real-time match analysis.
 - **Advanced Statistics**: Include more advanced statistics such as player acceleration, team formations, and heat maps.
 
-## Contributing
-Contributions are welcome! Please fork this repository and submit a pull request with your improvements.
+## Credit
+Special thanks to Abdullah Tarek for his amazing tutorial! [His Youtube Channel](https://www.youtube.com/@codeinajiffy)
+
 
 ## License
 This project is licensed under the MIT License.
