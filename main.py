@@ -10,7 +10,7 @@ from speed_and_distance_estimator import SpeedDistance_Estimator
 
 def main():
     #read video
-    video_frames = read_video('input_vids/08fd33_4.mp4')
+    video_frames = read_video('input_vids/cj_hightlight_carleton.mp4')
 
     # initalize tracker
     tracker = Tracker('models/best.pt')
@@ -80,7 +80,7 @@ def main():
     speed_distance_estimator.draw_speed_and_distance(output_video_frames, tracks)
 
     #save video
-    save_video(output_video_frames, 'output_vids/output_video.avi')
+    save_video(output_video_frames, 'output_vids/cj_hightlight_carleton_processed.avi')
 
 
 if __name__ == '__main__':
